@@ -1,6 +1,6 @@
 # mcpo-docker
 
-An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool that exposes MCP (Model Context Protocol) servers as OpenAPI-compatible HTTP endpoints for OpenWebUI.
+An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool that exposes MCP (Model Context Protocol) servers as OpenAPI-compatible HTTP endpoints for [OpenWebUI](https://github.com/open-webui/open-webui).
 
 ## Quick start
 
@@ -32,7 +32,7 @@ With mcpo, each MCP server gets a separate endpoint. For example:
 
 ## MCP configuration
 
-Standard MCP configuration file, see `config.json`.
+Standard MCP configuration file, see [config.json](./config.json).
 
 ## License
 
