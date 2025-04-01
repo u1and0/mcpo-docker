@@ -9,6 +9,9 @@ An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool t
 git clone https://github.com/alephpiece/mcpo-docker.git
 cd mcpo-docker
 
+# Copy the sample config and edit it as you like.
+cp config.example.json config.json
+
 # Create a container and wait for the servers to start.
 # It may take time if you have many servers enabled.
 docker compose up -d
@@ -36,7 +39,7 @@ With mcpo, each MCP server gets a separate endpoint. For example:
 
 ## MCP configuration
 
-Standard MCP configuration file, see [config.json](./config.json).
+Standard MCP configuration file, see [config.example.json](./config.example.json).
 
 ## License
 
