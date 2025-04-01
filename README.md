@@ -1,0 +1,39 @@
+# mcpo-docker
+
+An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool that exposes MCP (Model Context Protocol) servers as OpenAPI-compatible HTTP endpoints for OpenWebUI.
+
+## Quick start
+
+### Build from source
+
+```bash
+git clone https://github.com/alephpiece/mcpo-docker.git
+cd mcpo-docker
+
+docker build -t mcpo .
+docker-compose up -d
+# Wait for the servers to start.
+# It may take time if you have many servers enabled.
+```
+
+### Connect OpenWebUI to your servers
+
+> See [OpenAPI Tool Servers](https://docs.openwebui.com/openapi-servers/) for details.
+
+1. Open OpenWebUI > Settings > Tools
+2. Add a connection `http://localhost:8000/memory`
+3. Check available tools on the chat page
+
+With mcpo, each MCP server gets a separate endpoint. For example:
+
+- `http://localhost:8000/memory`
+- `http://localhost:8000/time`
+- `http://localhost:8000/sequential-thinking`
+
+## MCP configuration
+
+Standard MCP configuration file, see `config.json`.
+
+## License
+
+MIT
