@@ -4,16 +4,20 @@ An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool t
 
 ## Quick start
 
-### Build from source
-
-```bash
+```shell
+# Pull the repo
 git clone https://github.com/alephpiece/mcpo-docker.git
 cd mcpo-docker
 
-docker build -t mcpo .
-docker-compose up -d
-# Wait for the servers to start.
+# Create a container and wait for the servers to start.
 # It may take time if you have many servers enabled.
+docker compose up -d
+```
+
+Or you can build the docker from source.
+
+```shell
+docker build -t mcpo .
 ```
 
 ### Connect OpenWebUI to your servers
@@ -26,9 +30,9 @@ docker-compose up -d
 
 With mcpo, each MCP server gets a separate endpoint. For example:
 
+- `http://localhost:8000/sequential-thinking`
 - `http://localhost:8000/memory`
 - `http://localhost:8000/time`
-- `http://localhost:8000/sequential-thinking`
 
 ## MCP configuration
 

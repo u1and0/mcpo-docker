@@ -1,5 +1,12 @@
 {
     "mcpServers": {
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
         "memory": {
             "command": "npx",
             "args": [
@@ -12,17 +19,6 @@
             "args": [
                 "mcp-server-time",
                 "--local-timezone=Asia/Shanghai"
-            ]
-        },
-        "sequential-thinking": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@smithery/cli@latest",
-                "run",
-                "@smithery-ai/server-sequential-thinking",
-                "--key",
-                "YOUR_SMITHERY_KEY"
             ]
         }
     }

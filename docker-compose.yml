@@ -1,8 +1,8 @@
 services:
-  mcpo-proxy:
+  mcpo:
     build: .
-    container_name: mcpo-proxy
-    image: mcpo
+    container_name: mcpo
+    image: ghcr.io/alephpiece/mcpo
     ports:
       - "8000:8000"
     volumes:
