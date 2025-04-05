@@ -2,6 +2,8 @@
 
 An example Docker image for [mcpo](https://github.com/open-webui/mcpo), a tool that exposes MCP (Model Context Protocol) servers as OpenAPI-compatible HTTP endpoints for [OpenWebUI](https://github.com/open-webui/open-webui).
 
+> Still waiting for the official mcpo docker!
+
 ## Quick start
 
 ```shell

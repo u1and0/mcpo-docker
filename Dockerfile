@@ -7,16 +7,17 @@ LABEL org.opencontainers.image.licenses="MIT"
 
 # install npx
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
     nodejs \
     npm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# install mcpo and uv
-RUN pip install --no-cache-dir mcpo uv
+# install uv
+RUN curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local/bin" sh
 
 WORKDIR /app
 EXPOSE 8000
 
-ENTRYPOINT ["mcpo"]
+ENTRYPOINT ["uvx", "mcpo"]
 CMD ["--config", "/app/config.json"]
