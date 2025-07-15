@@ -10,11 +10,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     nodejs \
     npm \
+    docker \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # install uv
 RUN curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local/bin" sh
+
+# install deno
+RUN npm install -g deno
 
 WORKDIR /app
 EXPOSE 8000
