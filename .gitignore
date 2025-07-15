@@ -23,6 +23,3 @@ bundles/
 vendor/pkg/
 pyenv
 Vagrantfile
-
-config.json
-docker-compose.yml
