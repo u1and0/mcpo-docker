@@ -36,7 +36,10 @@ services:
     image: u1and0/mcpo:v0.1.0
     ports:
       - "18000:8000"
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./config.json:/app/config.json
 
 volumes:
